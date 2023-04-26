@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <data>
     <record id="ir_cron_scheduler_presale_archive" model="ir.cron">
         <field name="name">Presale : Recurring Archiving of Confirmed Orders</field>
-        <field name="model_id" ref="model_presale_order" />
+        <field name="model_id" ref="model_presale_order"/>
         <field name="state">code</field>
         <field name="code">model.archive_confirmed()</field>
-        <field name="user_id" ref="base.user_root" />
+        <field name="user_id" ref="base.user_root"/>
         <field name="interval_number">1</field>
         <field name="interval_type">days</field>
         <field name="numbercall">-1</field>
-        <field name="nextcall" eval="(DateTime.now()).strftime('%Y-%m-%d 23:59:59')" />
+        <field name="nextcall" eval="(DateTime.now()).strftime('%Y-%m-%d 23:59:59')"/>
     </record>
 </data>

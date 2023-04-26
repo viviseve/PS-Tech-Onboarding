@@ -5,9 +5,9 @@
         <field name="model">presale.order.line</field>
         <field name="arch" type="xml">
             <tree string="Presales Order Lines" editable="top">
-                <field name="product_id" />
-                <field name="quantity" />
-                <field name="price" />
+                <field name="product_id"/>
+                <field name="quantity"/>
+                <field name="price"/>
             </tree>
         </field>
     </record>

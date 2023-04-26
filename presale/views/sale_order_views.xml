@@ -5,18 +5,16 @@
         <record id="sale_order_view_form" model="ir.ui.view">
             <field name="name">sale.order.view.form.inherit.presale</field>
             <field name="model">sale.order</field>
-            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//button[@name='action_quotation_send'][4]" position="attributes">
                     <attribute name="groups">presale.presale_group_user</attribute>
                 </xpath>
                 <xpath expr="//field[@name='validity_date']" position="after">
-                    <div class="o_td_label"
-                        attrs="{'invisible': [('state', 'in', ['draft', 'sent'])]}">
-                        <label for="presale_id" string="Presale Order" />
+                    <div class="o_td_label" attrs="{'invisible': [('state', 'in', ['draft', 'sent'])]}">
+                        <label for="presale_id" string="Presale Order"/>
                     </div>
-                    <field name="presale_id"
-                        attrs="{'invisible': [('state', 'in', ['draft', 'sent'])]}" nolabel="1" />
+                    <field name="presale_id" attrs="{'invisible': [('state', 'in', ['draft', 'sent'])]}" nolabel="1"/>
                 </xpath>
             </field>
         </record>
