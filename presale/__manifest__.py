@@ -1,10 +1,11 @@
 {
     'name': 'Presales order',
-    'version': '1.0',
+    'version': '16.0.1.0.0',
     'description': 'An app to manage pre-saling',
+    'website': 'https://www.odoo.com',
     'summary': 'Manage your presales',
-    'author': 'Vincent Sevestre',
-    'license': 'LGPL-3',
+    'author': 'Vincent Sevestre, Odoo PS',
+    'license': 'OEEL-1',
     'category': 'Presale',
     'depends': [
         'base',
