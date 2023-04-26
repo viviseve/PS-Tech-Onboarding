@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<odoo>
+    <menuitem id="presale_menu_root" name="Presales" web_icon="presale,static/description/icon.svg">
+        <menuitem id="presale_menu" name="Presales Orders">
+            <menuitem id="presale_menu_action" action="presale_order_action" />
+        </menuitem>
+    </menuitem>
+</odoo>
