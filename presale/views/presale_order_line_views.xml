@@ -11,10 +11,4 @@
             </tree>
         </field>
     </record>
-
-    <record id="presale_order_line_action" model="ir.actions.act_window">
-        <field name="name">Presale Order Line</field>
-        <field name="res_model">presale.order.line</field>
-        <field name="view_mode">tree</field>
-    </record>
 </odoo>

@@ -68,11 +68,4 @@
             </search>
         </field>
     </record>
-
-    <record id="presale_order_action" model="ir.actions.act_window">
-        <field name="name">Presales Orders</field>
-        <field name="res_model">presale.order</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
 </odoo>

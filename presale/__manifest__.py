@@ -20,6 +20,7 @@
         'views/presale_menus.xml',
         'data/scheduler.xml',
         'data/ir_sequence_data.xml',
+        'data/ir_actions_data.xml',
     ],
     'auto_install': False,
     'application': True

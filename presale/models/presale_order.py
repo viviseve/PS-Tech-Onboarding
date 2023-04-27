@@ -1,4 +1,5 @@
 from odoo import Command, _, api, fields, models
+from odoo.exceptions import UserError
 
 
 class PresaleOrder(models.Model):
@@ -34,6 +35,8 @@ class PresaleOrder(models.Model):
             presale_order.state = 'confirmed'
             # Sales order creation
             order_lines = []
+            if presale_order.order_line_ids == []:
+                raise UserError(_('An empty order cannot be confirmed'))
             for presale_order_line in presale_order.order_line_ids:
                 order_lines.append(Command.create({
                     'product_id': presale_order_line.product_id.id,
@@ -43,7 +46,6 @@ class PresaleOrder(models.Model):
                 'name': presale_order.name,
                 'partner_id': presale_order.customer_id.id,
                 'order_line': order_lines,
-                'state': 'draft',
                 'presale_id': presale_order.id,
             }
             presale_order.sale_order_id = self.env["sale.order"].create(order)
@@ -51,8 +53,8 @@ class PresaleOrder(models.Model):
             mail_values = {
                 'subject': presale_order.name,
                 'email_to': presale_order.customer_id.email,
-                'body': f'Your presale order {presale_order.name} has been validated',
-                'body_html': f'Your presale order {presale_order.name} has been validated',
+                'body': _(f'Your presale order {presale_order.name} has been validated'),
+                'body_html': _(f'Your presale order {presale_order.name} has been validated'),
                 'res_id': presale_order.id,
                 'model': 'presale.order',
             }
