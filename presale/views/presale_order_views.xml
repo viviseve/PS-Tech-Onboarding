@@ -15,7 +15,7 @@
         <field name="name">presale.order.form</field>
         <field name="model">presale.order</field>
         <field name="arch" type="xml">
-            <form string="Offer">
+            <form string="Order">
                 <header>
                     <button
                         name="action_validate"

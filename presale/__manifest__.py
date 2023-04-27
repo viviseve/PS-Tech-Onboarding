@@ -6,20 +6,20 @@
     'summary': 'Manage your presales',
     'author': 'Vincent Sevestre, Odoo PS',
     'license': 'OEEL-1',
-    'category': 'Presale',
+    'category': 'Sales',
     'depends': [
-        'base',
         'mail',
         'sale_management',
     ],
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
+        'views/sale_order_views.xml',
         'views/presale_order_views.xml',
         'views/presale_order_line_views.xml',
         'views/presale_menus.xml',
-        'views/sale_order_views.xml',
         'data/scheduler.xml',
+        'data/ir_sequence_data.xml',
     ],
     'auto_install': False,
     'application': True

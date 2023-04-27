@@ -13,5 +13,5 @@ class PresaleOrderLine(models.Model):
 
     @api.depends('product_id', 'quantity')
     def _compute_price(self):
-        for record in self:
-            record.price = record.product_id['standard_price'] * record.quantity
+        for product_order_line in self:
+            product_order_line.price = product_order_line.product_id['list_price'] * product_order_line.quantity

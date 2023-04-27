@@ -2,6 +2,6 @@
 <odoo>
     <record id="presale_group_user" model="res.groups">
         <field name="name">Presale user</field>
-        <field name="category_id" ref="base.module_category_presale"/>
+        <field name="category_id" ref="base.module_category_sales_presales"/>
     </record>
 </odoo>
